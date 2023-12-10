@@ -41,3 +41,12 @@ This was done using src/R/barcodeLocation.R. The interesting finding is that mot
 
 3. The files fwd and rev-comp are then concatenated
 
+See the script `pipeline/submitMergeDmux.sh`
+
+4. The sample file was created for the nf-core Ampliseq run
+
+See the R script `src/R/sampleSheetCreation.R`
+
+5. Running nextflow Ampliseq pipeline. 
+
+See the pipeline README.md file. As we have rev-comp'ed all sequences as compared to the design, we also swap the FW and RV primer specification.

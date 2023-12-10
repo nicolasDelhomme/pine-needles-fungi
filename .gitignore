@@ -49,3 +49,6 @@ reference/
 singularity
 singularity/
 
+# nf
+.nextflow
+.nextflow.log*
