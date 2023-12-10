@@ -3,13 +3,13 @@
 # variables
 proj=u2023006
 doc=$(realpath ../doc)
-in=$(realpath ../data/raw)
+in=$(realpath ../data/demultiplex)
 out=$(dirname $in)/demultiplex
 sif=$(realpath ../singularity/demultiplex_1.2.1.sif)
 
 # input files
 read -r -a BC <<< $(find $doc -type f -name "needle_pool*" | sort | xargs)
-read -r -a FQ <<< $(find $in -type l -name "*.fastq.gz" | sort | xargs)
+read -r -a FQ <<< $(find $in -type f -name "*_RevComp.ccsreads.fastq.gz" | sort | xargs)
 
 #echo ${BC[@]}
 #echo ${FQ[@]}
