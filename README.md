@@ -2,12 +2,12 @@
 
 Metadata provided by Susan are in the doc folder, the xlsx file.
 
-## Pine needles fungi
+## Pine growth chamber
 
 ### Setup
 
 ``` bash
-ln -s  /mnt/ada/projects/pine/nstreet/pine-leaf-fungi data
+ln -s  /mnt/ada/projects/pine/nstreet/pine-growth-chamber gcdata
 ln -s  /mnt/picea/projects/singularity/kogia singularity
 ```
 
@@ -19,25 +19,25 @@ The barcodes for the samples were extracted from the xlsx file, one tsv file per
 
 | File                         | Original file size | Unknown barcode file size |
 |-----------------|-----------------------|--------------------------------|
-| ps_376_001.ccsreads.fastq.gz | 134460210          | 47996314                  |
-| ps_376_002.ccsreads.fastq.gz | 125088107          | 40099572                  |
-| ps_376_003.ccsreads.fastq.gz | 114792485          | 41544462                  |
-| ps_376_004.ccsreads.fastq.gz | 136726504          | 109914483                 |
-| ps_376_005.ccsreads.fastq.gz | 96232818           | 41179699                  |
+| ps_291_001.ccsreads.fastq.gz | 40847007          | 30200712                  |
+| ps_291_002.ccsreads.fastq.gz | 43349534          | 27979964                  |
+| ps_291_003.ccsreads.fastq.gz | 42311699          | 27091893                  |
+| ps_291_004.ccsreads.fastq.gz | 45726195          | 28868989                 |
+| ps_291_005.ccsreads.fastq.gz | 40631708           | 25842036                  |
 
-Clearly, something is off with the 4th pool.
+All pools have high amount of unknown sequences
 
-2.  Assessing the forth pool barcode location
+2.  Assessing the barcode location
 
-This was done using src/R/barcodeLocation.R. The interesting finding is that mot only for pool 4 but also for the others, a lot of the unknown are actually reverse-complement sequences, about 54% of all sequences. Reverse-complementing and extracting them rescues a lot of data, especially for pool 4. It is still very surprising that pool4 has so much "lost" data.
+This was done using src/R/barcodeLocation.R. The interesting finding is that not only for pool 4 but also for the others, a lot of the unknown are actually reverse-complement sequences, about 54% of all sequences. Reverse-complementing and extracting them rescues a lot of data, especially for pool 4. It is still very surprising that pool4 has so much "lost" data.
 
 | File                         | Unknown file size | Rescued rev-comp |
 |------------------------------|-------------------|------------------|
-| ps_376_001.ccsreads.fastq.gz | 47996314          | 44380196         |
-| ps_376_002.ccsreads.fastq.gz | 40099572          | 34697736         |
-| ps_376_003.ccsreads.fastq.gz | 41544462          | 35385059         |
-| ps_376_004.ccsreads.fastq.gz | 109914483         | 82555784         |
-| ps_376_005.ccsreads.fastq.gz | 41179699          | 27888227         |
+| ps_291_001.ccsreads.fastq.gz | 47996314          | 44380196         |
+| ps_291_002.ccsreads.fastq.gz | 40099572          | 34697736         |
+| ps_291_003.ccsreads.fastq.gz | 41544462          | 35385059         |
+| ps_291_004.ccsreads.fastq.gz | 109914483         | 82555784         |
+| ps_291_005.ccsreads.fastq.gz | 41179699          | 27888227         |
 
 3. The files fwd and rev-comp are then concatenated
 

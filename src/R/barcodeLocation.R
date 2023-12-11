@@ -60,7 +60,7 @@ fqFiles <- list.files(here("data/demultiplex"),
                       full.names=TRUE)
 
 pos.list <- mclapply(fqFiles,.process,
-                     "TCCTCCGCTTATTGATATGC",
+                     "TGTGARTCATCGARTCTTTG",
                      mc.cores=5L)
 
 #' We observed that most of the unknown sequences are valid if reverse-complemented. 

@@ -25,8 +25,8 @@ nextflow run nf-core/ampliseq \
 -c $(realpath ../nextflow/upscb.config) \
 -w $(realpath ../data)/work \
 --input "$(realpath ../nextflow/samplesheet.tsv)" \
---pacbio --data_ref_taxonomy "unite-fungi=9.0" \
+--pacbio --dada_ref_taxonomy "unite-fungi=9.0" \
 --outdir $(realpath ../data)/nextflow \
---RV_primer "ACCWGCGGARGGATCATTA" \
---FW_primer "TCCTCCGCTTATTGATATGC"
+--RV_primer "" \
+--FW_primer "TGTGARTCATCGARTCTTTG"
 ```
