@@ -48,6 +48,7 @@ reference
 reference/
 singularity
 singularity/
+gcdata
 
 # nf
 .nextflow

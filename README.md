@@ -29,7 +29,7 @@ Clearly, something is off with the 4th pool.
 
 2.  Assessing the forth pool barcode location
 
-This was done using src/R/barcodeLocation.R. The interesting finding is that mot only for pool 4 but also for the others, a lot of the unknown are actually reverse-complement sequences, about 54% of all sequences. Reverse-complementing and extracting them rescues a lot of data, especially for pool 4. It is still very surprising that pool4 has so much "lost" data.
+This was done using src/R/barcodeLocation.R. The interesting finding is that not only for pool 4 but also for the others, a lot of the unknown are actually reverse-complement sequences, about 54% of all sequences. Reverse-complementing and extracting them rescues a lot of data, especially for pool 4. It is still very surprising that pool4 has so much "lost" data.
 
 | File                         | Unknown file size | Rescued rev-comp |
 |------------------------------|-------------------|------------------|
