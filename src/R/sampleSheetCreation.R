@@ -20,10 +20,10 @@ suppressPackageStartupMessages({
 #' # Sample Sheet
 #' 
 #' Locate the files
-file.list <- list.files(here("data/merge"),pattern=".*\\.fastq\\.gz",full.names=TRUE)
+file.list <- list.files(here("gcdata/merge"),pattern=".*\\.fastq\\.gz",full.names=TRUE)
 
 #' # Export
-write_tsv(data.frame(sampleID=gsub("ps_376_00[1-5]_|\\.ccsreads.*","",basename(file.list)),
+write_tsv(data.frame(sampleID=gsub("ps_291_00[1-5]_|\\.ccsreads.*","",basename(file.list)),
                  forwardReads=file.list),
           here("nextflow/samplesheet.tsv"))
 

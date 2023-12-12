@@ -3,8 +3,8 @@ set -eu
 
 # for some reason, srun hangs (probably too short jobs). Solution was to srun interactively on ioa and do the merging there
 #proj=u2023006
-in=$(realpath ../data/demultiplex)
-out=$(realpath ../data)/merge
+in=$(realpath ../gcdata/demultiplex)
+out=$(realpath ../gcdata)/merge
 #partition=ioa
 
 [[ ! -d $out ]] && mkdir -p $out

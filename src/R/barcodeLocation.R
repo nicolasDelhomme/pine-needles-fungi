@@ -34,11 +34,11 @@ source(here("UPSCb-common/src/R/percentile.R"))
   
   pos <- regexpr(adapter,sread(fq))
   ppos <- percentile(pos)
-  plot(density(pos[pos<=ppos["99%"]]),paste(sid, "forward orientation"))
+  plot(density(pos[pos<=ppos["98%"]]),paste(sid, "forward orientation"))
   
   rpos <- regexpr(adapter,reverseComplement(sread(fq)))
   prpos <- percentile(rpos)
-  plot(density(rpos[rpos<=prpos["99%"]]),paste(sid, "reverse orientation"))
+  plot(density(rpos[rpos<=prpos["98%"]]),paste(sid, "reverse orientation"))
   
   return(rpos)
 }
@@ -55,12 +55,13 @@ source(here("UPSCb-common/src/R/percentile.R"))
 #' We check and find all positions where the barcode could be located. 
 #' Note that to see the plots you need to run without parallelisation ( _i.e._ 
 #' `lapply` and not `mclapply`)
-fqFiles <- list.files(here("data/demultiplex"),
+fqFiles <- list.files(here("gcdata/demultiplex"),
                       pattern=".*_UNKNOWN.ccsreads.fastq.gz",
                       full.names=TRUE)
 
+#' primer is TGTGARTCATCGARTCTTTG
 pos.list <- mclapply(fqFiles,.process,
-                     "TGTGARTCATCGARTCTTTG",
+                     "TGTGA[A,G]TCATCGA[A,G]TCTTTG",
                      mc.cores=5L)
 
 #' We observed that most of the unknown sequences are valid if reverse-complemented. 
@@ -68,9 +69,10 @@ pos.list <- mclapply(fqFiles,.process,
 #' the sequence, _i.e._ PacBio multiadapter reads.
 #' 
 #' The position is at bp 10, which means the barcode (n=9) is from bp 1 to 9 as expected
-sapply(pos.list,median)
+sapply(lapply(mclapply(pos.list,table,mc.cores=5L),
+              sort,decreasing=TRUE),head,n=5)
 
-#' This would rescue an average 54% of the UNKNOWN
+#' This would rescue an average 42% of the UNKNOWN
 sapply(lapply(pos.list,"==",10),sum) / elementNROWS(pos.list)
 
 #' # Export

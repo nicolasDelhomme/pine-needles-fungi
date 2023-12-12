@@ -16,17 +16,17 @@ nextflow pull nf-core/ampliseq
 
 3. actual run command (from the pipeline directory)
 ```bash
-out=$(realpath ../data)/work
+out=$(realpath ../gcdata)/work
 
 [[ ! -d $out ]] && mkdir -p $out
 
 nextflow run nf-core/ampliseq \
 -profile upscb,singularity \
 -c $(realpath ../nextflow/upscb.config) \
--w $(realpath ../data)/work \
+-w $(realpath ../gcdata)/work \
 --input "$(realpath ../nextflow/samplesheet.tsv)" \
 --pacbio --dada_ref_taxonomy "unite-fungi=9.0" \
---outdir $(realpath ../data)/nextflow \
---RV_primer "" \
+--outdir $(realpath ../gcdata)/nextflow \
+--RV_primer "TAAGCATATCAATA" \
 --FW_primer "TGTGARTCATCGARTCTTTG"
 ```
