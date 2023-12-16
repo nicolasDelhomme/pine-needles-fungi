@@ -50,3 +50,9 @@ See the R script `src/R/sampleSheetCreation.R`
 5.  Running nextflow Ampliseq pipeline.
 
 See the pipeline README.md file. 
+
+6. Performed the swarm clustering
+
+The data is prepared using the `src/R/swarmInput.R`.
+
+Swarm is then run using `pipeline/submitSwarm.sh`. Parameters are the same as in Schneider _et al._, see [there](https://github.com/andnischneider/its_workflow/blob/master/workflow/scripts/runSwarm.sh).
