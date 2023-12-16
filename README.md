@@ -2,6 +2,8 @@
 
 Metadata provided by Susan are in the doc folder, the xlsx file.
 
+**Note** the `main` branch is for the outdoor samples. The growth chamber data is in the `growth-chamber` branch.
+
 ## Pine needles fungi
 
 ### Setup
