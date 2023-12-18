@@ -4,6 +4,15 @@ Metadata provided by Susan are in the doc folder, the xlsx file.
 
 **Note** the `main` branch is for the outdoor samples. The growth chamber data is in the `growth-chamber` branch.
 
+## Devised fragment structure
+
+| Position (bp) | Sequence             | Description                                                                                          |
+|---------------|----------------------|------------------------------------------------------------------------------------------------------|
+| 1-9           |                      | see samples file                                                                                     |
+| 10-29         | TCCTCCGCTTATTGATATGC | reverse PCR primer ITS4                                                                              |
+|               |                      | amplicon                                                                                             |
+|               | ACCWGCGGARGGATCATTA  | forward primer devised by the sequence similarity of the sequences; should be ITS1 followed by CATTA |
+
 ## Pine needles fungi
 
 ### Setup
@@ -20,7 +29,7 @@ The barcodes for the samples were extracted from the xlsx file, one tsv file per
 1.  The samples were demultiplexed (pipeline/submitDemultiplex.sh)
 
 | File                         | Original file size | Unknown barcode file size |
-|------------------|-----------------------|-------------------------------|
+|------------------------------|--------------------|---------------------------|
 | ps_376_001.ccsreads.fastq.gz | 134460210          | 47996314                  |
 | ps_376_002.ccsreads.fastq.gz | 125088107          | 40099572                  |
 | ps_376_003.ccsreads.fastq.gz | 114792485          | 41544462                  |
@@ -61,4 +70,4 @@ Swarm is then run using `pipeline/submitSwarm.sh`. Parameters are the same as in
 
 ## Note
 
-**Important** Because of the preprocessing, the reconstructed sequences are likely to be reverse-complemented. This does not affect annotation, clustering, _etc._ but for comparing to other dataset or for reporting, it might be worth to 2x check the sequence orientation and correct it if needed.
+**Important** Because of the preprocessing, the reconstructed sequences are likely to be reverse-complemented. This does not affect annotation, clustering, *etc.* but for comparing to other dataset or for reporting, it might be worth to 2x check the sequence orientation and correct it if needed.
