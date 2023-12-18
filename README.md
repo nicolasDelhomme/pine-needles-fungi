@@ -5,7 +5,7 @@ Metadata provided by Susan are in the doc folder, the xlsx file.
 ## Devised fragment structure
 
 | Position (bp) | Sequence             | Description                                                               |
-|------------------------|------------------------|------------------------|
+|---------------|----------------------|---------------------------------------------------------------------------|
 | 1-9           |                      | see samples file                                                          |
 | 10-29         | TGTGARTCATCGARTCTTTG | PCR primer gITS7                                                          |
 |               |                      | amplicon                                                                  |
@@ -27,7 +27,7 @@ The barcodes for the samples were extracted from the xlsx file, one tsv file per
 1.  The samples were demultiplexed (pipeline/submitDemultiplex.sh)
 
 | File                         | Original file size | Unknown barcode file size |
-|-------------------|-----------------------|-------------------------------|
+|------------------------------|--------------------|---------------------------|
 | ps_291_001.ccsreads.fastq.gz | 40847007           | 30200712                  |
 | ps_291_002.ccsreads.fastq.gz | 43349534           | 27979964                  |
 | ps_291_003.ccsreads.fastq.gz | 42311699           | 27091893                  |
@@ -41,7 +41,7 @@ All pools have high amount of unknown sequences
 This was done using src/R/barcodeLocation.R. The interesting finding is that a lot of the unknown are actually reverse-complement sequences, about 42% of all sequences. Reverse-complementing and extracting them rescues a lot of data. It is still very surprising that all pools have so much "lost" data.
 
 | File                         | Unknown file size | Rescued rev-comp | Total    |
-|------------------------|----------------|----------------|----------------|
+|------------------------------|-------------------|------------------|----------|
 | ps_291_001.ccsreads.fastq.gz | 30200712          | 10432293         | 17420621 |
 | ps_291_002.ccsreads.fastq.gz | 27979964          | 10493356         | 17969702 |
 | ps_291_003.ccsreads.fastq.gz | 27091893          | 9923625          | 17349226 |
