@@ -20,7 +20,7 @@ The barcodes for the samples were extracted from the xlsx file, one tsv file per
 1.  The samples were demultiplexed (pipeline/submitDemultiplex.sh)
 
 | File                         | Original file size | Unknown barcode file size |
-|-----------------|-----------------------|--------------------------------|
+|------------------|-----------------------|-------------------------------|
 | ps_376_001.ccsreads.fastq.gz | 134460210          | 47996314                  |
 | ps_376_002.ccsreads.fastq.gz | 125088107          | 40099572                  |
 | ps_376_003.ccsreads.fastq.gz | 114792485          | 41544462                  |
@@ -41,20 +41,24 @@ This was done using src/R/barcodeLocation.R. The interesting finding is that not
 | ps_376_004.ccsreads.fastq.gz | 109914483         | 82555784         |
 | ps_376_005.ccsreads.fastq.gz | 41179699          | 27888227         |
 
-3. The files fwd and rev-comp are then concatenated
+3.  The files fwd and rev-comp are then concatenated
 
 See the script `pipeline/submitMergeDmux.sh`
 
-4. The sample file was created for the nf-core Ampliseq run
+4.  The sample file was created for the nf-core Ampliseq run
 
 See the R script `src/R/sampleSheetCreation.R`
 
-5. Running nextflow Ampliseq pipeline. 
+5.  Running nextflow Ampliseq pipeline.
 
 See the pipeline README.md file. As we have rev-comp'ed all sequences as compared to the design, we also swap the FW and RV primer specification.
 
-6. Performed the swarm clustering
+6.  Performed the swarm clustering
 
 The data is prepared using the `src/R/swarmInput.R`.
 
-Swarm is then run using `pipeline/submitSwarm.sh`. Parameters are the same as in Schneider _et al._, see [there](https://github.com/andnischneider/its_workflow/blob/master/workflow/scripts/runSwarm.sh).
+Swarm is then run using `pipeline/submitSwarm.sh`. Parameters are the same as in Schneider *et al.*, see [there](https://github.com/andnischneider/its_workflow/blob/master/workflow/scripts/runSwarm.sh).
+
+## Note
+
+**Important** Because of the preprocessing, the reconstructed sequences are likely to be reverse-complemented. This does not affect annotation, clustering, _etc._ but for comparing to other dataset or for reporting, it might be worth to 2x check the sequence orientation and correct it if needed.
