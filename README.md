@@ -33,11 +33,11 @@ This was done using src/R/barcodeLocation.R. The interesting finding is that a l
 
 | File                         | Unknown file size | Rescued rev-comp | Total    |
 |---------------------------|----------------|---------------|---------------|
-| ps_291_001.ccsreads.fastq.gz | 47996314          | 10432293         | 17420621 |
-| ps_291_002.ccsreads.fastq.gz | 40099572          | 10493356         | 17969702 |
-| ps_291_003.ccsreads.fastq.gz | 41544462          | 9923625          | 17349226 |
-| ps_291_004.ccsreads.fastq.gz | 109914483         | 10943005         | 19121964 |
-| ps_291_005.ccsreads.fastq.gz | 41179699          | 9810422          | 16915905 |
+| ps_291_001.ccsreads.fastq.gz | 30200712          | 10432293         | 17420621 |
+| ps_291_002.ccsreads.fastq.gz | 27979964          | 10493356         | 17969702 |
+| ps_291_003.ccsreads.fastq.gz | 27091893          | 9923625          | 17349226 |
+| ps_291_004.ccsreads.fastq.gz | 28868989         | 10943005         | 19121964 |
+| ps_291_005.ccsreads.fastq.gz | 25842036          | 9810422          | 16915905 |
 
 3.  The files fwd and rev-comp are then concatenated
 
@@ -56,3 +56,7 @@ See the pipeline README.md file.
 The data is prepared using the `src/R/swarmInput.R`.
 
 Swarm is then run using `pipeline/submitSwarm.sh`. Parameters are the same as in Schneider _et al._, see [there](https://github.com/andnischneider/its_workflow/blob/master/workflow/scripts/runSwarm.sh).
+
+## Note
+
+**Important** The demultiplexing is here problematic. A lot more data got dropped than expected from looking up the position of the primers (barcode are the 9 bp upstream of it). There should be about 78% of the data recovered, but it's rather in the 40%. It would be worth checking the barcodes, checking the sequences that are missed and possibly try another tool (_e.g._ deML).
