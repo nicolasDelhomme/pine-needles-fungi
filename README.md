@@ -5,13 +5,20 @@
 Ruirui Zhao1*, Susan J. Nuske2, Martín A. Núñez3,4, Alex Fajardo5,6, Jaime Moyano3, Anne C. S. McIntosh7, Marie-Charlotte Nilsson1, Michael J. Gundale1*
 
 1 Department of Forest Ecology and Management, Swedish University of Agricultural Sciences, SE-90183 Umeå, Sweden.
-2 EcoFutures, Brisbane 4006, Australia
+
+2 EcoFutures, Brisbane 4006, Australia.
+
 3 Grupo de Ecología de Invasiones, INIBIOMA-UNComa, CONICET, AR-8400 Bariloche, Argentina.
+
 4 Department of Biology and Biochemistry, University of Houston, Houston, TX 77204, USA.
+
 5 Instituto de Investigación Interdisciplinaria (I3), Vicerrectoría Académica, Universidad de Talca, Talca 3460000, Chile.
-6 Instituto de Ecología y Biodiversidad (IEB), Las Palmeras 3425, Ñuñoa 7750000, Chile
+
+6 Instituto de Ecología y Biodiversidad (IEB), Las Palmeras 3425, Ñuñoa 7750000, Chile.
+
 7 Science Department, Augustana Faculty, University of Alberta, Camrose, AB T4V 2R3, Canada.
-* Correspondence author: Ruirui Zhao (Ruirui.zhao@slu.se); Michael J. Gundale (Michael.Gundale@slu.se).
+
+\* Correspondence author: Ruirui Zhao (Ruirui.zhao@slu.se); Michael J. Gundale (Michael.Gundale@slu.se).
 
 ## Abstract
 
