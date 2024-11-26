@@ -1,5 +1,9 @@
 # Distinct Foliar Fungal Communities in Pinus contorta Across Native and Introduced Ranges: Evidence for Context Dependency of Pathogen Release
 
+## Citation
+
+Please use [![DOI](https://zenodo.org/badge/729349935.svg)](https://doi.org/10.5281/zenodo.14224526) to cite the use of this repository.
+
 ## Authors
 
 Ruirui Zhao1*, Susan J. Nuske2, Martín A. Núñez3,4, Alex Fajardo5,6, Jaime Moyano3, Anne C. S. McIntosh7, Marie-Charlotte Nilsson1, Michael J. Gundale1*
