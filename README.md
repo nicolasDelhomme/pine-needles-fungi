@@ -1,4 +1,12 @@
-# Amplicon Seq
+# Distinct Foliar Fungal Communities in Pinus contorta Across Native and Introduced Ranges: Evidence for Context Dependency of Pathogen Release
+
+## Authors
+
+## Abstract
+
+Inter-continental study systems are crucial for testing ecological hypotheses that seek to explain the superior performance of plant species when they are introduced to new regions, such as the widely cited Enemy Release Hypothesis (ERH). Pinus contorta (lodgepole pine), native to North America, has been extensively introduced to Europe and the Southern Hemisphere, making it an ideal tree species for studying invasion hypotheses from a biogeographical perspective. We compared foliar fungal communities, especially pathogens, of P. contorta across two native–introduced region pairs (NIRP): a northern NIRP (from Canada to Sweden) and a southern NIRP (from the USA to Patagonia), while also examining the differences between source plantations and invasion fronts within Patagonia. Firstly, P. contorta underwent significant fungal community shifts and experienced pathogen release during its large-scale introduction from North America to Sweden and Patagonia. These changes were more pronounced for the southern NIRP pair, where no closely related tree species to P. contorta are present in Patagonia. In Sweden, the presence of the phylogenetically related P. sylvestris and its associated local fungal community appears to play a pivotal role in influencing the foliar fungal community of P. contorta after its introduction. In Patagonia, the incomplete co-invasion of fungal taxa from the USA emerges as a principal driver of the observed variability in fungal community composition and pathogen release following the introduction of P. contorta. Secondly, in Patagonia, fungal community composition differences between source plantations and invasion fronts provided insufficient evidence that pathogen release occurs at this local scale. Integrating both biogeographical and phylogenetic perspectives, our study indicates that priority effects of the local fungi appear to be a dominant community assembly process when introduction is done in a phylogenetically similar community; whereas, co-invasion of fungal communities is the dominant process in phylogenetically distant communities.
+
+## Methods
 
 Metadata provided by Susan are in the doc folder, the xlsx file.
 
@@ -70,4 +78,4 @@ Swarm is then run using `pipeline/submitSwarm.sh`. Parameters are the same as in
 
 ## Note
 
-**Important** Because of the preprocessing, the reconstructed sequences are likely to be reverse-complemented. This does not affect annotation, clustering, *etc.* but for comparing to other dataset or for reporting, it might be worth to 2x check the sequence orientation and correct it if needed.
+**Important**: Because of the preprocessing, the reconstructed sequences are likely to be reverse-complemented. This does not affect annotation, clustering, _etc._ but for comparing to other dataset or for reporting, it might be worth to 2x check the sequence orientation and correct it if needed.
